@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Personal Portfolio</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <body>
+       <!-- <h1 id="title">PORTFOLIO</h1> -->
+        <div id="hello"><div>Hello</div></div>
+        <h2 id="home">Home</h2>
+
+    </body>
+    <script>
+        const title = document.createElement("h1")
+        title.innerHTML= "My Portfolio"
+        
+        const hello = document.getElementById("hello")
+        hello.innerHTML = "<h2 id=\"hi\">Hi there!</h2>"
+        
+        hello.appendChild(title)
+
+        const image = document.createElement("img")
+        image.src = "https://th.bing.com/th/id/R.cd8aee659b1e806060bb576f53ae9b31?rik=A9eovWnpGWhpvg&riu=http%3a%2f%2fwpdevshed.com%2fwp-content%2fuploads%2f2014%2f02%2fwpdevshed-portfolio.jpg&ehk=EGg1rpxGZoifk3WEsv3cNA3A49JCmMGptzZiRqOO7RI%3d&risl=&pid=ImgRaw&r=0"
+
+        hello.appendChild(image)
+        
+
+        image.alt = "picture called portfolio"
+
+        image.style.width="50%"
+        image.style.paddingLeft = "100px"
+
+        image.onclick = () => {
+            image.src = "https://th.bing.com/th/id/OIP.TX3W6t84PTnSdqPwTtM_TQEyDM?pid=ImgDet&rs=1"        
+        }
+
+        document.onmouseenter = () => {
+            document.getElementById("hi").innerText = "hello kaiga"
+            document.getElementById("hi").style.color = "blue"
+        }
+
+        document.addEventListener("mouseleave", () => {
+            document.getElementById("hi").innerText = "hello there"
+            document.getElementById("hi").style.color = "green"
+        });
+ 
+    </script>
+</html>
